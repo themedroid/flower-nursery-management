@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "name": "Create order",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "customer_name": "Иван Иванов",
+        "customer_phone": "+79001234567",
+        "customer_email": "test@example.com",
+        "total_amount": 2500,
+        "items": [
+          {
+            "product_id": 1,
+            "product_name": "Пион тестовый",
+            "quantity": 2,
+            "price": 1250
+          }
+        ]
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "order_id": "number",
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

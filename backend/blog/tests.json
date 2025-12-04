@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "name": "Get all published posts",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "0": {
+          "id": "number",
+          "title": "string",
+          "excerpt": "string"
+        }
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
