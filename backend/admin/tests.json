@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "name": "Get dashboard stats",
+      "method": "GET",
+      "path": "/?path=dashboard",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total_orders": "number",
+        "total_revenue": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
